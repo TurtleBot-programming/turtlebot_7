@@ -3,7 +3,7 @@
 <package format="3">
   <name>tb4_cpp_prac7</name>
   <version>0.0.0</version>
-  <description>Custom A* global planner plugin for Nav2 on the TurtleBot 4 (ICTE4001 Practical 7)</description>
+  <description>Nav2 global planner plugin (iar_astar_planner/IarAstarPlanner) that uses A* search over the global costmap, with a navigation launch file and parameters for the TurtleBot 4. ICTE4001 Practical 7.</description>
   <maintainer email="dyrfernando@gmail.com">YasiruRF</maintainer>
   <license>Apache-2.0</license>
 
