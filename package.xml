@@ -2,9 +2,10 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>tb4_cpp_prac7</name>
-  <version>0.0.0</version>
+  <version>0.1.0</version>
   <description>Nav2 global planner plugin (iar_astar_planner/IarAstarPlanner) that uses A* search over the global costmap, with a navigation launch file and parameters for the TurtleBot 4. ICTE4001 Practical 7.</description>
   <maintainer email="dyrfernando@gmail.com">YasiruRF</maintainer>
+  <author email="mrtharinsilva@gmail.com">Rovindu</author>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake_ros</buildtool_depend>
