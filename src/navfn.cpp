@@ -168,7 +168,7 @@ namespace iar_astar_planner
         push_cur(k - nx_); // top
         push_cur(k + nx_); // bottom
 
-        /* MILESTONE 1.1 (done)
+        /* TODO TASK - MILESTONE # 1.1
             Check whether top left, top right, bottom left, and bottom right cells
             (not just the right, left, top and bottom)  should be pushed to the 
             buffer "curPotentArr_"
@@ -208,7 +208,7 @@ namespace iar_astar_planner
         int cycle = 0;  // which cycle we're on
 
 
-        /* MILESTONE 2.1 (done)
+        /* TODO TASK - MILESTONE # 2.1
             Compute the heuristic distance from start cell to goal cell
             and add the heuristic distance to the potential threshold
         */
@@ -223,7 +223,7 @@ namespace iar_astar_planner
         bool propSuccess = false;
         for(; cycle < cycles; cycle++)
         {
-            /* MILESTONE 2.2 (done) 
+            /* TODO TASK - MILESTONE # 2.2 
                 Check whether the number of valid cell indexes in buffer ``curPotentArr_" and ``nextPotentArr_"
                 is equal to zero, if yes, we break the loop
             */
@@ -232,7 +232,7 @@ namespace iar_astar_planner
             }
 				//-----------------------
 
-            /* MILESTONE 2.3 (done)
+            /* TODO TASK - MILESTONE # 2.3
                 Set the values of cells in ``pending_" with indexes stored in ``curPotentArr_" to false
             */
             int i = n_curPotentArr_;
@@ -260,7 +260,7 @@ namespace iar_astar_planner
             curPotentArr_ = nextPotentArr_;
             nextPotentArr_ = pb;
 
-            /* MILESTONE 2.4 (done)
+            /* TODO TASK - MILESTONE # 2.4
                 Check whether after swapping the contents of buffers ``curPotentArr_" and ``nextPotentArr_"
                 there are indexes of cells stored in the ``curPotentArr_". 
                 If does not exist any, swap the contents of buffers `curPotentArr_" and ``overflowPotentArr_", 
@@ -276,7 +276,7 @@ namespace iar_astar_planner
             }
             
 
-            /* MILESTONE 2.5 (done)
+            /* TODO TASK - MILESTONE # 2.5
                 Check whether the propogation hit the goal pose. 
                 If yes, stop the propogation process and set succes flag to ''true"
             */
@@ -304,7 +304,7 @@ namespace iar_astar_planner
         {
             float l, r, t, b, tl, tr, bl, br;
 
-            /* MILESTONE 3.1 (done)
+            /* TODO TASK - MILESTONE # 3.1
                 Compute the potentials moving from the left, right, top, and bottom cells
                 and save them to variables l, r, t, and b, respectively. 
                 Example, if you move from left cell to the current cell
@@ -318,7 +318,7 @@ namespace iar_astar_planner
             b = potarr_[n + nx_] + costarr_[n]; //arrive from bottom
   
 
-            /* MILESTONE 3.2 (done)
+            /* TODO TASK - MILESTONE # 3.2
                 Compute the potentials moving from the top-left, top-right, bottom-left, and
                 bottom-right cells, and save them to variables tl, tr, bl, and br, respectively.
                 The formula used is
@@ -333,7 +333,7 @@ namespace iar_astar_planner
             
 
 
-            /* MILESTONE 3.3 (done)
+            /* TODO TASK - MILESTONE # 3.3
                 Find the minimum value among l, r, t, b, tl, tr, bl, and br, 
                 and set the minimum value as the newly computed potential for cell 
                 with index n. 
@@ -348,13 +348,13 @@ namespace iar_astar_planner
             if (pot < potarr_[n]) /* only update the newly computed pot if it is 
                 less than the existing saved potential estimate */ 
             {
-                /* MILESTONE 3.4 (done)
+                /* TODO TASK - MILESTONE # 3.4
                     Update the potential value of cell with index n
                 */
                 
                 potarr_[n] = pot;
 
-                /* MILESTONE 3.5 (done)
+                /* TODO TASK - MILESTONE # 3.5
                     Compute the heuristic distance from current cell to the goal cell,
                     and add the distance cost to the pot
                 */
@@ -367,7 +367,7 @@ namespace iar_astar_planner
 
                 if (pot < potentThresh_)
                 {
-                    /* MILESTONE 3.6 (done)
+                    /* TODO TASK - MILESTONE # 3.6
                         Check whether current cell's left, right, top, and bottom cells need to update 
                         their potentials. 
                         If the existing saved potential of the neighbouring cell is larger than the 
@@ -390,7 +390,7 @@ namespace iar_astar_planner
                      	push_next(n + nx_);	
                     }
 
-                    /* MILESTONE 3.7 (done)
+                    /* TODO TASK - MILESTONE # 3.7
                         Check whether current cell's top-left, top-right, bottom-left, and bottom-right
                         cells need to update their potentials. 
                         If the existing saved potential of the neighbouring cell is larger than the 
@@ -418,7 +418,7 @@ namespace iar_astar_planner
                     }
 
                 } else {
-                    /* MILESTONE 3.8 (done)
+                    /* TODO TASK - MILESTONE # 3.8
                         Check whether current cell's left, right, top, and bottom cells need to update 
                         their potentials. 
                         If the existing saved potential of the neighbouring cell is larger than the 
@@ -442,7 +442,7 @@ namespace iar_astar_planner
                      	push_over(n + nx_); 
                     }
 
-                    /* MILESTONE 3.9 (done)
+                    /* TODO TASK - MILESTONE # 3.9
                         Check whether current cell's top-left, top-right, bottom-left, and bottom-right
                         cells need to update their potentials. 
                         If the existing saved potential of the neighbouring cell is larger than the 
@@ -507,7 +507,7 @@ namespace iar_astar_planner
             int curp = potarr_[stc];
             int minp = curp;
 
-            /* MILESTONE 4.1 (done)
+            /* TODO TASK - MILESTONE # 4.1
                 Among eight neighbouring cells of current cell (with index as ``stc")
                 find a cell with minimum potential, and save its index to stc, and its
                 potential to ''minp"
