@@ -4,8 +4,8 @@
   <name>tb4_cpp_prac7</name>
   <version>0.0.0</version>
   <description>Custom A* global planner plugin for Nav2 on the TurtleBot 4 (ICTE4001 Practical 7)</description>
-  <maintainer email="robotai@todo.todo">robotai</maintainer>
-  <license>TODO: License declaration</license>
+  <maintainer email="dyrfernando@gmail.com">YasiruRF</maintainer>
+  <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake_ros</buildtool_depend>
 

@@ -78,6 +78,10 @@ planner_server:
       plugin: "iar_astar_planner/IarAstarPlanner"
 ```
 
+## License
+
+Apache-2.0 (see `package.xml`).
+
 ## Notes
 
 - Planning fails (empty path) if the goal is off the costmap or in a lethal-obstacle cell, or if the start is off the costmap.
